@@ -1,10 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import Data from "./data.json";
 
 
-const Saludador = () =>{
+
+const Itemlistcontainer = () => {
+
+    const [posts, setPosts] = useState([]);
+    
+    useEffect(() => {
+        fetch('data.json')
+            .then((res) => res.json())
+            .then((obj) => setPosts(obj));
+            
+            
+    }, []);
+
     return (
-        <h1>Hola! Bienvenidos!</h1>
+        <div>
+            {posts.map(post =>
+                <div>
+                    <p>{post.nombre}</p>
+                    <p>{post.precio}</p>
+                </div>
+            )}
+        </div>
     )
 }
 
-export default Saludador;
+
+export default Itemlistcontainer;

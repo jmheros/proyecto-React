@@ -15,7 +15,7 @@ const Navbar = () => {
 
             <nav className="navbar">
                 <ul className="navbar__items">
-                    <li><a className="navbar__link" href="#"></a>Mujer</li>
+                    <li><a className="navbar__link" href="#"></a>Hombre</li>
                     <li><a className="navbar__link" href="#"></a>Mujer</li>
                     <li><a className="navbar__link" href="#"></a>Niño/a</li>
 
